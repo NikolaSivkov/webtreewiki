@@ -1,0 +1,18 @@
+.functionContainer{border: none;background: none;}
+.side-nav>li>ul>li{list-style-type: none;}
+.red{color:red;}
+
+
+/*
+
+Syntax Higliter classes 
+
+*/
+.razor.razorAt {
+  color: black !important;
+  background-color: yellow!important;   
+}
+
+.razor.classname {
+    color: lightsteelblue!important;
+}
