@@ -23,6 +23,7 @@
                     <p class="title"><a href="#">Templates</a></p>
                     <div class="content">
                         <ul class="side-nav">
+						    <li><a href="#RenderMenu">RenderTemplate</a></li>
                             <li><a href="#RenderMenu">RenderMenu</a></li>
                             <li><a href="#RenderCustomMenu">RenderCustomMenu</a></li>
                             <li><a href="#RenderGallery">RenderGallery</a></li>
@@ -40,6 +41,55 @@
             <h1>Templates</h1>
             <div class="row">
                 <div class="large-12 columns">
+				        <div class="panel functionContainer">
+                        <a href="#RenderTemplate"><h4 id="RenderMenu">@Templates.RenderTemplate()</h4></a>
+                        <hr />
+                        <p class="functionInfo">
+                        Renders a template that doesn not depend on model
+                        <h5>Parameters</h5>
+                        <table class="large-12">
+                            <thead>
+                                <tr>
+                                    <td class="large-1">Name</td>
+                                    <td class="large-1">Type</td>
+                                    <td class="large-10">Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>menu</td>
+                                    <td>string</td>
+                                    <td>name of the menu template to use </td>
+                                </tr>
+								 <tr>
+                                    <td>folder</td>
+                                    <td>string</td>
+                                    <td>name of the folder to look in for the specified template default is 'shared'</td>
+                                </tr>	
+                            </tbody>
+                        </table>
+                        <h5>Example</h5>
+                        <pre class="brush: razor;">
+                        &lt;html&gt;
+                            &lt;head&gt;
+                            &lt;/head&gt;
+                            &lt;body&gt;
+                                @Templates.RenderTemplate("_menu")
+                            &lt;/body&gt;
+                        &lt;/html&gt;
+                        </pre>
+                        <br />
+                        <pre class="brush: razor;">
+                        &lt;html&gt;
+                            &lt;head&gt;
+                            &lt;/head&gt;
+                            &lt;body&gt;
+                                @Templates.RenderTemplate("footer","other")
+                            &lt;/body&gt;
+                        &lt;/html&gt;
+                        </pre>
+                        <hr />
+                    </div>
                     <div class="panel functionContainer">
                         <a href="#RenderMenu"><h4 id="RenderMenu">@Templates.RenderMenu()</h4></a>
                         <hr />
